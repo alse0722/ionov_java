@@ -1,4 +1,4 @@
-package src;
+package main.java.sgu.ru;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
