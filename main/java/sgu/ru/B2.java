@@ -21,10 +21,10 @@ public class B2 {
         System.out.print("Введите имя дня недели и количество дней(Пример: sunday 10): ");
         String inputLine = scanner.nextLine();
         String[] inputParts = inputLine.split("\\s+");
+        scanner.close();
 
         if (inputParts.length != 2) {
             System.out.println("Неправильный формат!");
-            scanner.close();
             return;
         }
 
@@ -34,7 +34,6 @@ public class B2 {
             currentDay = DayOfWeek.valueOf(inputDay);
         } catch (IllegalArgumentException e) {
             System.out.println("Неправильно введен день недели!");
-            scanner.close();
             return;
         }
 
@@ -43,20 +42,15 @@ public class B2 {
             daysToAdd = Integer.parseInt(inputParts[1]);
             if (daysToAdd < 0) {
                 System.out.println("Число должно быть положительным!");
-                scanner.close();
                 return;
             }
         } catch (NumberFormatException e) {
             System.out.println("Неправильно введено число дней!");
-            scanner.close();
             return;
         }
 
         DayOfWeek resultDay = currentDay.addDays(daysToAdd);
 
         System.out.println("Через " + daysToAdd + " дней будет: " + resultDay.toString().toLowerCase());
-        scanner.close();
     }
 }
-
-

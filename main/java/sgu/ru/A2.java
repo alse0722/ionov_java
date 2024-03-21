@@ -8,7 +8,7 @@ import java.time.temporal.ChronoUnit;
 
 public class A2 {
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
         try {
             LocalDate[] minMaxDates = findMinMaxDatesFromFile("main\\java\\sgu\\ru\\files\\input_a1.txt");
             LocalDate minDate = minMaxDates[0];
@@ -21,7 +21,7 @@ public class A2 {
         }
     }
 
-    public static LocalDate[] findMinMaxDatesFromFile(String fileName) throws IOException {
+    public LocalDate[] findMinMaxDatesFromFile(String fileName) throws IOException {
         LocalDate minDate = null;
         LocalDate maxDate = null;
 
