@@ -14,7 +14,7 @@ public class C1 {
             String line;
             while ((line = br.readLine()) != null) {
                 if (!line.trim().isEmpty()) {
-                    // Проверка наличия только букв русского или английского алфавита
+
                     Pattern pattern = Pattern.compile("[а-яА-Яa-zA-Z]+");
                     Matcher matcher = pattern.matcher(line);
                     boolean valid = true;
@@ -38,7 +38,7 @@ public class C1 {
                     String firstName = parts[1];
                     String lastName = parts[0];
                     String patronymic = parts[2];
-                    // Инициалы
+
                     String initials = lastName.substring(0, 1) + ".";
                     if (!patronymic.isEmpty()) {
                         initials += patronymic.substring(0, 1) + ".";
@@ -50,8 +50,7 @@ public class C1 {
             e.printStackTrace();
         }
     }
-    
-    // Метод для проверки, содержит ли строка только буквы русского или английского алфавита
+
     private static boolean isName(String str) {
         return str.matches("[а-яА-Яa-zA-Z]+");
     }
